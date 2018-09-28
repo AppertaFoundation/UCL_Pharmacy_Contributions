@@ -1,0 +1,77 @@
+<!--
+  Generated template for the Home page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Past Contributions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let card of contributions | async ">
+		<ion-card-header>
+			<h1>Contribution Form</h1>
+		</ion-card-header>
+		<ion-card-content> 
+		<h2><b>Pharmecist / Tech Name</b></h2>
+		<p>{{card.name}}</p><br>
+		
+		<h2><b>Date</b></h2>
+		<p>{{card.date}}</p><br>
+		
+		<h2><b>Patient Initials</b></h2>
+		<p>{{card.patientInitials}}</p><br>
+		
+		<h2><b>Date of Admission</b></h2>
+		<p>{{card.dateOfAdmission}}</p><br>
+		
+		<h2><b>Ward / Area / Clinic</b></h2>
+		<p>{{card.ward}}</p><br>
+	
+		<h2><b>Speciality</b></h2>
+		<p>{{card.speciality}}</p><br>
+
+		<h2><b>Reason for Contribution</b></h2>
+		<p>{{card.type}}</p><br>
+
+		<h2><b>Where Identified?</b></h2>
+		<p>{{card.whereId}}</p>
+		<p><b>Further Details: </b> {{card.specification1}}</p><br>
+
+		<h2><b>Prescriber</b></h2>
+		<p>{{card.prescriber}}</p><br>
+
+		<h2><b>Prescription Type</b></h2>
+		<p>{{card.prescriptionType}}</p>
+		<p><b>Further Details: </b>{{card.specification2}}</p><br>
+
+		<h2><b>Drug Involved</b></h2>
+		<p>{{card.drug}}</p><br>
+
+		<h2><b>Stage at which Contribution Made</b></h2>
+		<p>{{card.stage}}</p><br>
+
+		<h2><b>Problem or Original Prescription</b></h2>
+		<p>{{card.problem}}<br><b>Further Details:</b> {{card.specification3}}</p><br>
+
+		<h2><b>Action Taken</b></h2>
+		<p>{{card.action}}</p><br>
+
+		<h2><b>Outcome</b></h2>
+		<p>{{card.outcome}}</p><br>
+
+		<h2><b>Outcome / Resolution / New Prescription</b></h2>
+		<p>{{card.specification4}}</p><br>
+
+		<h2><b>Clinical Significance</b></h2>
+		<p><b>Level (0-5):</b> {{card.significance}}<br>{{card.specification5}}</p><br>
+	
+		</ion-card-content>
+	</ion-card>
+
+</ion-content>

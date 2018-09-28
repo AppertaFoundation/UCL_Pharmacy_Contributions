@@ -1,0 +1,9 @@
+First Make sure the folder ‘myApp’ is placed on your Desktop”
+
+1. Install Ionic
+2. Install Cordova Packages
+3. Install FireBase
+4. Install NodeJs
+
+5. After all that, go to terminal and go to the directory
+6. type ionic serve —-lab

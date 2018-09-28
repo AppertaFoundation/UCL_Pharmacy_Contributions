@@ -1,0 +1,218 @@
+<!--
+  Generated template for the Contribution page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Contribution Form</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+  <ion-list text-wrap>
+  <ion-item>
+    <ion-label floating style="color:#3399ff">Pharmacist/Tech Name</ion-label>
+    <ion-input type="text" [(ngModel)]="contribution.name"></ion-input> 
+  </ion-item>
+  <ion-item>
+    <ion-label style="color:#3399ff">Date</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="contribution.date">
+    </ion-datetime>
+  </ion-item>
+   <ion-item>
+    <ion-label style="color:#3399ff">Date of Admission</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="contribution.dateOfAdmission">
+    </ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label floating style="color:#3399ff">Patient Initials</ion-label>
+    <ion-input type="text" [(ngModel)]="contribution.patientInitials"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating style="color:#3399ff">Ward/Area/Clinic</ion-label>
+    <ion-input type="text" [(ngModel)]="contribution.ward"></ion-input>
+  </ion-item>
+  </ion-list>
+
+    <ion-list text-wrap>
+
+     <div class="form-group" padding>
+      <ion-label for="options9" style="color:#3399ff"><h3><b>Speciality</b></h3></ion-label>
+      <div *ngFor="let option9 of options9">
+          <ion-label>
+              <input type="checkbox"
+                     name="option9"
+                     value="{{option9.value}}"
+                     [(ngModel)]="option9.checked"/>
+              {{option9.name}}
+          </ion-label>
+      </div>
+      </div>
+      
+    <div class="form-group" padding>
+      <ion-label for="options1" style="color:#3399ff"><h3><b>Reason for Contribution</b></h3></ion-label>
+      <div *ngFor="let option1 of options1">
+          <ion-label>
+              <input type="checkbox"
+                     name="option1"
+                     value="{{option1.value}}"
+                     [(ngModel)]="option1.checked"/>
+              {{option1.name}}
+          </ion-label>
+      </div>
+      </div>
+
+     <div class="form-group" padding>
+      <ion-label for="options" style="color:#3399ff"><h3><b>Where Identified?</b></h3></ion-label>
+      <div *ngFor="let option of options">
+          <ion-label>
+              <input type="checkbox"
+                     name="options"
+                     value="{{option.value}}"
+                     [(ngModel)]="option.checked"/>
+              {{option.name}}
+          </ion-label>
+      </div>
+      </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Other Location (SPECIFY)</ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.specification1"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="form-group" padding>
+      <ion-label for="options2" style="color:#3399ff"><h3><b>Prescriber / HCP Involved</b></h3></ion-label>
+      <div *ngFor="let option2 of options2">
+          <ion-label>
+              <input type="checkbox"
+                     name="options2"
+                     value="{{option2.value}}"
+                     [(ngModel)]="option2.checked"/>
+              {{option2.name}}
+          </ion-label>
+      </div>
+      </div>
+
+    <div class="form-group" padding>
+      <ion-label for="options3" style="color:#3399ff"><h3><b>Prescription Type</b></h3></ion-label>
+      <div *ngFor="let option3 of options3">
+          <ion-label>
+              <input type="checkbox"
+                     name="options3"
+                     value="{{option3.value}}"
+                     [(ngModel)]="option3.checked"/>
+              {{option3.name}}
+          </ion-label>
+      </div>
+      </div>
+
+      <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Other Prescription Type (SPECIFY)</ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.specification2"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Drug Involved</ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.drug"></ion-input>
+      </ion-item>
+    </ion-list>
+
+     <div class="form-group" padding>
+      <ion-label for="options4" style="color:#3399ff"><h3><b>Stage at which Contribution Made</b></h3></ion-label>
+      <div *ngFor="let option4 of options4">
+          <ion-label>
+              <input type="checkbox"
+                     name="options4"
+                     value="{{option4.value}}"
+                     [(ngModel)]="option4.checked"/>
+              {{option4.name}}
+          </ion-label>
+      </div>
+      </div>
+
+      <div class="form-group" padding>
+      <ion-label for="options5" style="color:#3399ff"><h3><b>Problem or Original Prescription</b></h3></ion-label>
+      <div *ngFor="let option5 of options5">
+          <ion-label>
+              <input type="checkbox"
+                     name="options5"
+                     value="{{option5.value}}" 
+                     [(ngModel)]="option5.checked"/>
+              {{option5.name}} 
+          </ion-label>
+      </div>
+      </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Problem or Original prescription - Further details</ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.specification3"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="form-group" padding>
+      <ion-label for="options6" style="color:#3399ff"><h3><b>Action Taken</b></h3></ion-label>
+      <div *ngFor="let option6 of options6">
+          <ion-label>
+              <input type="checkbox"
+                     name="options6"
+                     value="{{option6.value}}"
+                     [(ngModel)]="option6.checked"/>
+              {{option6.name}}
+          </ion-label>
+      </div>
+      </div>
+
+       <div class="form-group" padding>
+      <ion-label for="options7" style="color:#3399ff"><h3><b>Outcome (Tick one option only)</b></h3></ion-label>
+      <div *ngFor="let option7 of options7">
+          <ion-label>
+              <input type="checkbox"
+                     name="options7"
+                     value="{{option7.value}}"
+                     [(ngModel)]="option7.checked"/>
+              {{option7.name}}
+          </ion-label>
+      </div>
+      </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Outcome / Resolution / New Prescription</ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.specification4"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="form-group" padding>
+      <ion-label for="options8" style="color:#3399ff"><h3><b>Clinical Significance</b></h3></ion-label>
+      <div *ngFor="let option8 of options8">
+          <ion-label>
+              <input type="checkbox"
+                     name="options8"
+                     value="{{option8.value}}"
+                     [(ngModel)]="option8.checked"/>
+              {{option8.name}}
+          </ion-label>
+      </div>
+      </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating style="color:#3399ff">Significane Explanation (Compulsory for 4 - 5) </ion-label>
+        <ion-input type="text" [(ngModel)]="contribution.specification5"></ion-input>
+      </ion-item>
+    </ion-list>
+</ion-list>
+
+  <button ion-button full (click)="submit()">Submit</button>
+</ion-content>
+
